@@ -4,7 +4,11 @@
 This repository contains a curated collection of Python scripts and notebooks created for class projects and personal exploration. This repository serves as a structured resource for managing Python code and promoting clarity, efficiency, and reusability.  
 
 ## Motivation
-Control Python programs versions.
+This repository was created with the following goals:  
+1. To organize and version control Python scripts and Jupyter notebooks efficiently.  
+2. To enhance programming skills by documenting progress and exploring advanced Python topics.  
+3. To serve as a reusable library of solutions for data analysis, machine learning, and automation tasks.  
+4. To leverage tools like Visual Studio Code and Jupyter Notebook for efficient development and experimentation.  
 
 ## System requirements
 - Python 3.7 or later.  
@@ -50,4 +54,4 @@ Control Python programs versions.
 
 ## Contact
 Author: José Eduardo Cordoba Arango
-E-mail: 
+E-mail: - -
