@@ -1,76 +1,56 @@
-Extracción de Datos desde Imágenes con Python
+# Data Extraction from Images with Python
 
-Este proyecto contiene un script en Python que procesa una imagen de una lista de estudiantes (captura de un documento original en PDF) y extrae las columnas de interés: matrícula y nombre. Posteriormente, los datos se guardan en un archivo CSV.
+This project contains a Python script that processes an image of a student list (captured from an original PDF document) and extracts the columns of interest: enrollment number and student name. The extracted data is then saved in a CSV file.
 
-Requisitos Previos
+## Prerequisites
 
-Tener instalado Python 3.6 o superior.
+1. Have Python 3.6 or later installed.
+2. Install the following required libraries:
+   ```bash
+   pip install pytesseract 
+      ```
+   ```bash
+   pillow pandas
+   ```
+   On macOS, install Tesseract OCR with:
+   ```bash
+   brew install tesseract
+   ```
 
-Instalar las siguientes bibliotecas necesarias:
+## Process Description
 
-pip install pytesseract pillow pandas
+1. **Image Capture**:
+   - An image containing the columns of interest (enrollment number and student name) was captured from an original PDF document.
 
-En macOS, instala Tesseract OCR con:
+2. **Procesamiento del texto**:
+   - The script uses Tesseract OCR to extract text from the image.
+   - Enrollment numbers and student names are cleaned and separated using regular expressions.
 
-brew install tesseract
+3. **Creating DataFrames**:
+   - The extracted data is organized into columns using the pandas library.
 
-Descripción del Proceso
+4. **Exportación de resultados**:
+   - The final result is saved to a CSV file named `datos_extraidos.csv`.
 
-Captura de imagen:
+## Usage
 
-Se capturó una imagen que contiene las columnas de interés (matrícula y nombre del alumno) a partir de un documento PDF original.
+### 1. Modifica la ruta de la imagen
 
-Procesamiento del texto:
+Update the Image Path `image_path` variable with the full path to your image:
+```python
+image_path = "path/to/your/image.png"
+```
 
-El script utiliza Tesseract OCR para extraer el texto de la imagen.
+### 2. Run the Script
 
-Se limpian y separan las matrículas y los nombres de los estudiantes con expresiones regulares.
+Execute the provided code in your Python environment.
 
-Creación de DataFrames:
+### 3. Output
 
-Los datos extraídos se organizan en columnas utilizando la biblioteca pandas.
+The script will generate a file named `datos_extraidos.csv` with the following format:
 
-Exportación de resultados:
-
-El resultado final se guarda en un archivo CSV llamado datos_extraidos.csv.
-
-Uso
-
-1. Modifica la ruta de la imagen
-
-Actualiza la variable image_path con la ruta completa donde se encuentra tu imagen:
-
-image_path = "ruta/a/tu/imagen.png"
-
-2. Ejecuta el script
-
-Ejecuta el código proporcionado en tu entorno de Python.
-
-3. Resultado
-
-El script generará un archivo llamado datos_extraidos.csv con el siguiente formato:
-
-No.
-
-Matrícula
-
-Nombre alumno
-
-1
-
-244020028
-
-BRETON NICASIO DIEGO ALEJANDRO
-
-2
-
-244020007
-
-CARREON ROSALES MARGARITA
-
-...
-
-...
-
-...
-
+| No. | Enrollment  | Student Name              |
+|-----|-------------|-----------------------------------|
+| 1   | 244020028   | BRETON NICASIO DIEGO ALEJANDRO    |
+| 2   | 244020007   | CARREON ROSALES MARGARITA         |
+| ... | ...         | ...                               |
