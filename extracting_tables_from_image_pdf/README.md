@@ -22,21 +22,21 @@ This project contains a Python script that processes an image of a student list 
 1. **Image Capture**:
    - An image containing the columns of interest (enrollment number and student name) was captured from an original PDF document.
 
-2. **Procesamiento del texto**:
+2. **Text Processing**:
    - The script uses Tesseract OCR to extract text from the image.
    - Enrollment numbers and student names are cleaned and separated using regular expressions.
 
 3. **Creating DataFrames**:
    - The extracted data is organized into columns using the pandas library.
 
-4. **Exportación de resultados**:
+4. **Exporting Results**:
    - The final result is saved to a CSV file named `datos_extraidos.csv`.
 
 ## Usage
 
-### 1. Modifica la ruta de la imagen
+### 1. Update the Image Path
 
-Update the Image Path `image_path` variable with the full path to your image:
+Modify the `image_path` variable with the full path to your image:
 ```python
 image_path = "path/to/your/image.png"
 ```
